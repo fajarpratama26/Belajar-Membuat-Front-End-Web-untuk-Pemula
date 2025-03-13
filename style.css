@@ -1,0 +1,203 @@
+/* Reset beberapa elemen untuk membuat styling konsisten */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya untuk body dan layout umum */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Formulir dan input buku */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='checkbox'] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Bagian pencarian buku */
+section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Daftar Buku */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Daftar buku yang belum selesai dibaca */
+#incompleteBookList,
+#completeBookList {
+  list-style-type: none;
+}
+
+#incompleteBookList div,
+#completeBookList div {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#incompleteBookList button,
+#completeBookList button {
+  background-color: #ff7043;
+  margin-right: 10px;
+  color: white;
+}
+
+#incompleteBookList button:hover,
+#completeBookList button:hover {
+  background-color: #e64a19;
+}
+
+/* Tombol Edit */
+#incompleteBookList button:nth-child(3),
+#completeBookList button:nth-child(3) {
+  background-color: #ffb74d;
+}
+
+#incompleteBookList button:nth-child(3):hover,
+#completeBookList button:nth-child(3):hover {
+  background-color: #f57c00;
+}
+
+/* Styling untuk book item */
+.book-item-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.book-item-author,
+.book-item-year {
+  font-size: 1rem;
+  color: #555;
+}
+
+div[data-testid='bookItem'] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div[data-testid='bookItem'] h3,
+div[data-testid='bookItem'] p {
+  flex: 1;
+}
+
+div[data-testid='bookItem'] div {
+  display: flex;
+  gap: 10px;
+}
+
+/* Styling untuk tombol pencarian */
+#searchSubmit {
+  background-color: #2196f3;
+  border-radius: 4px;
+}
+
+#searchSubmit:hover {
+  background-color: #1976d2;
+}
+
+input[type='text'] {
+  width: 80%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Styling untuk form pencarian */
+form#searchBook {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+form#searchBook label {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+/* Styling untuk form input buku */
+form#bookForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Styling untuk submit button dalam form */
+#bookFormSubmit {
+  background-color: #4caf50;
+  color: white;
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+#bookFormSubmit span {
+  display: none;
+}
+
+/* Menampilkan teks "Belum selesai dibaca" saat tombol di klik */
+#bookFormIsComplete:checked ~ #bookFormSubmit span {
+  display: inline;
+}
